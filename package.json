@@ -27,7 +27,7 @@
     "formatCss": "prettier --plugin prettier-plugin-css-order --write .",
     "formatJs": "prettier --write docs/scripts.js",
     "format": "npm run formatCss && npm run formatJs",
-    "prepublishOnly": "npm run format && npm run build",
+    "prepublishOnly": "npm run build",
     "preversion": "npm run format",
     "version": "git add -A src",
     "postversion": "git push && git push --tags"
