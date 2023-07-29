@@ -6,7 +6,8 @@
   "license": "MIT",
   "author": "Cedrik Boudreau",
   "files": [
-    "dist"
+    "dist",
+    "LICENSE.md"
   ],
   "repository": {
     "type": "git",
