@@ -1,0 +1,43 @@
+{
+  "name": "simpleaura.css",
+  "version": "1.0.0",
+  "description": "A minimalist stylesheet for your HTML elements.",
+  "main": "dist/simpleaura.css",
+  "license": "MIT",
+  "author": "Cedrik Boudreau",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedriking/simpleaura.git"
+  },
+  "keywords": [
+    "css",
+    "stylesheet",
+    "simpleaura",
+    "minimalist"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && npm run format && npm run buildDist && npm run copy && node ./comment.js",
+    "buildDist": "postcss ./src/*.css -u autoprefixer -u postcss-custom-properties -u cssnano --ext .min.css --map=false --dir ./dist",
+    "buildDocs": "rimraf ./docs/css && npm run format && postcss ./src/*.css -u autoprefixer -u postcss-custom-properties -u cssnano --ext .min.css --dir ./docs/css",
+    "copy": "cp ./src/*.css ./dist",
+    "formatCss": "prettier --plugin prettier-plugin-css-order --write .",
+    "formatJs": "prettier --write docs/scripts.js",
+    "format": "npm run formatCss && npm run formatJs",
+    "prepublishOnly": "npm run format && npm run build",
+    "preversion": "npm run format",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-custom-properties": "^13.3.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-css-order": "^1.3.1"
+  }
+}
