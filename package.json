@@ -1,6 +1,6 @@
 {
   "name": "simpleaura.css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimalist stylesheet for your HTML elements.",
   "main": "dist/simpleaura.css",
   "license": "MIT",
