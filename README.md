@@ -22,6 +22,20 @@
 - Beautiful
 - No classes
 
+## Show your love!
+
+If you love simpleaura.css, you can now show it with a badge on your website!  
+[![SimpleAura.css](https://img.shields.io/badge/made%20with-simpleaura.css-dcd8cc.svg)](https://simpleaura.cedrik.dev/)
+
+```html
+<a href="https://simpleaura.cedrik.dev/">
+  <img
+    src="https://img.shields.io/badge/made%20with-simpleaura.css-dcd8cc.svg"
+    alt="Made with simpleaura.css"
+  />
+</a>
+```
+
 ## Why?
 
 I commonly make quick demo pages or websites with simple content. For these, I don't want to spend time styling them but don't like the ugliness of the default styles.
